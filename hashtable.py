@@ -41,3 +41,5 @@ class HashTable(object):
 
     def values(self):
         """Return a list of all values in this hash table"""
+
+    def __iter__(self):
