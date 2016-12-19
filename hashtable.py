@@ -37,6 +37,8 @@ class HashTable(object):
                 return True
         return False
 
+    #Best Case is Omega(1)
+    #Worst Case is O(n)
     def get(self, key):
         """Return the value associated with the given key, or raise KeyError"""
         index = self._bucket_index(key)
