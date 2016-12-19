@@ -43,7 +43,14 @@ class HashTable(object):
 
     def set(self, key, value):
         """Insert or update the given key with its associated value"""
-
+        index = self._bucket_index(key)
+        bucket = self.buckets[index]
+        for b in bucket:
+            if b.data[0] == key:
+                entry = (b.data[0], value)
+                b.data = entry
+                return
+        bucket.append((key, value))
 
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError"""
