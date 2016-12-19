@@ -73,5 +73,11 @@ class HashTable(object):
 
     def values(self):
         """Return a list of all values in this hash table"""
-
+        values = []
+        for bucket in self.buckets:
+            for b in bucket:
+                if b is not None:
+                    values.append(b.data[1])
+        return values
+        
     def __iter__(self):
