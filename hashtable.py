@@ -17,6 +17,9 @@ class HashTable(object):
         """Return the bucket index where the given key would be stored"""
         return hash(key) % len(self.buckets)
 
+    #Best Case is Omega(n)
+    #Worst Case is O(n)
+    #Answer: Theta(n)
     def length(self):
         """Return the length of this hash table by traversing its buckets"""
         count = 0
