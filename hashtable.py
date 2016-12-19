@@ -48,6 +48,8 @@ class HashTable(object):
                 return b.data[1]
         raise KeyError('Key is not present in the HashTable')
 
+    #Best Case is Omega(1)
+    #Worst Case is O(n)
     def set(self, key, value):
         """Insert or update the given key with its associated value"""
         index = self._bucket_index(key)
