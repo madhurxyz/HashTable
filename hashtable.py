@@ -19,7 +19,11 @@ class HashTable(object):
 
     def length(self):
         """Return the length of this hash table by traversing its buckets"""
-
+        count = 0
+        for bucket in self.buckets:
+            count += bucket.length()
+        return count
+        
     def contains(self, key):
 
 
