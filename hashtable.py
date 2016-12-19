@@ -64,7 +64,12 @@ class HashTable(object):
 
     def keys(self):
         """Return a list of all keys in this hash table"""
-
+        keys = []
+        for bucket in self.buckets:
+            for b in bucket:
+                if b is not None:
+                    keys.append(b.data[0])
+        return keys
 
     def values(self):
         """Return a list of all values in this hash table"""
