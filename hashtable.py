@@ -61,6 +61,8 @@ class HashTable(object):
                 return
         bucket.append((key, value))
 
+    #Best Case is Omega(1)
+    #Worst Case is O(n)
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError"""
         index = self._bucket_index(key)
