@@ -23,9 +23,14 @@ class HashTable(object):
         for bucket in self.buckets:
             count += bucket.length()
         return count
-        
-    def contains(self, key):
 
+    def contains(self, key):
+        index = self._bucket_index(key)
+        bucket = self.buckets[index]
+        for b in bucket:
+            if b.data[0] == key:
+                return True
+        return False
 
     def get(self, key):
         """Return the value associated with the given key, or raise KeyError"""
