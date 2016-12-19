@@ -79,5 +79,9 @@ class HashTable(object):
                 if b is not None:
                     values.append(b.data[1])
         return values
-        
+
     def __iter__(self):
+        for bucket in self.buckets:
+            if bucket:
+                for b in bucket:
+                    yield b
