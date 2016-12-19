@@ -73,9 +73,9 @@ class HashTable(object):
                 return
         raise KeyError('Key is not present in the HashTable')
 
-    #Best Case Omega(n^2)
-    #Worst Case O(n^2)
-    #Answer: Theta(n^2)
+    #Best Case Omega(b + n)
+    #Worst Case O(b + n)
+    #Answer: Theta(b + n)
     def keys(self):
         """Return a list of all keys in this hash table"""
         keys = []
