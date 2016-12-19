@@ -85,6 +85,9 @@ class HashTable(object):
                     keys.append(b.data[0])
         return keys
 
+    #Best Case Omega(n^2)
+    #Worst Case O(n^2)
+    #Answer: Theta(n^2)
     def values(self):
         """Return a list of all values in this hash table"""
         values = []
