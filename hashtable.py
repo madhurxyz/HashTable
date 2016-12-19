@@ -54,7 +54,13 @@ class HashTable(object):
 
     def delete(self, key):
         """Delete the given key from this hash table, or raise KeyError"""
-
+        index = self._bucket_index(key)
+        bucket = self.buckets[index]
+        for b in bucket:
+            if b.data[0] == key:
+                bucket.delete(b.data)
+                return
+        raise KeyError('Key is not present in the HashTable')
 
     def keys(self):
         """Return a list of all keys in this hash table"""
