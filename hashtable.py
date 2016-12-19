@@ -27,6 +27,8 @@ class HashTable(object):
             count += bucket.length()
         return count
 
+    #Best Case is Omega(1)
+    #Worst Case is O(n)
     def contains(self, key):
         index = self._bucket_index(key)
         bucket = self.buckets[index]
