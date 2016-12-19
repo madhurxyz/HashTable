@@ -97,6 +97,9 @@ class HashTable(object):
                     values.append(b.data[1])
         return values
 
+    #Best Case Omega(n)
+    #Worst Case O(n)
+    #Answer: Theta(n)
     def __iter__(self):
         for bucket in self.buckets:
             if bucket:
