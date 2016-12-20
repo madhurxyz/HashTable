@@ -87,7 +87,7 @@ class HashTable(object):
 
     #Best Case Omega(b + n)
     #Worst Case O(b + n)
-    #Answer: Theta(b + n)
+    #Answer: Theta(b + n )
     def values(self):
         """Return a list of all values in this hash table"""
         values = []
@@ -97,9 +97,9 @@ class HashTable(object):
                     values.append(b.data[1])
         return values
 
-    #Best Case Omega(n)
-    #Worst Case O(n)
-    #Answer: Theta(n)
+    #Best Case Omega(1)
+    #Worst Case O(1)
+    #Answer: Theta(1)
     def __iter__(self):
         for bucket in self.buckets:
             if bucket:
